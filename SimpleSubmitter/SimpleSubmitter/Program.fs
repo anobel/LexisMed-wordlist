@@ -1,5 +1,6 @@
-﻿
-[<EntryPoint>]
-let main argv = 
-    printfn "%A" argv
-    0
+﻿open Suave                 // always open suave
+open Suave.Http.Successful // for OK-result
+open Suave.Web             // for config
+
+//[<EntryPoint>]
+startWebServer defaultConfig (OK "Hello World!")
